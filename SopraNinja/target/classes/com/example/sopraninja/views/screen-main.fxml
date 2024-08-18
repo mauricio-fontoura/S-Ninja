@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400" prefWidth="600" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sopraninja.controller.TelaPrincipalController">
+   <children>
+      <Pane layoutX="425.0" layoutY="52.0" prefHeight="261.0" prefWidth="143.0">
+         <children>
+            <Label id="allTextStyle" layoutX="27.0" layoutY="50.0" text="Tipo de Material" />
+            <Label id="allTextStyle" layoutX="32.0" layoutY="198.0" text="Comprimento" />
+            <MenuButton id="menuMaterial" fx:id="menuMaterial" layoutX="14.0" layoutY="68.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="125.0">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="PVC" />
+                  <MenuItem mnemonicParsing="false" text="CPVC" />
+                  <MenuItem mnemonicParsing="false" text="ALUMINIO" />
+                  <MenuItem mnemonicParsing="false" text="COBRE" />
+                  <MenuItem mnemonicParsing="false" text="BAMBU" />
+                  <MenuItem mnemonicParsing="false" text="INOX" />
+               </items>
+            </MenuButton>
+            <TextField id="areaComprimento" fx:id="areaComprimento" layoutX="12.0" layoutY="216.0" prefHeight="26.0" prefWidth="125.0" />
+            <Label id="allTextStyle" layoutX="26.0" layoutY="100.0" text="Tubos Medidas" />
+            <MenuButton id="menuMedidas" fx:id="menuMedidas" layoutX="14.0" layoutY="118.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="125.0">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="35mm" />
+                  <MenuItem mnemonicParsing="false" text="25mm" />
+                  <MenuItem mnemonicParsing="false" text="21mm" />
+                  <MenuItem mnemonicParsing="false" text="16mm" />
+               </items>
+            </MenuButton>
+            <Label id="allTextStyle" layoutX="58.0" text="Flauta" />
+            <TextField id="areaNomeFlauta" fx:id="areaNomeFlauta" layoutX="13.0" layoutY="18.0" prefHeight="26.0" prefWidth="125.0" />
+            <Label id="allTextStyle" layoutX="42.0" layoutY="148.0" text="Tonalidade" />
+            <MenuButton id="menuTonalidade" fx:id="menuTonalidade" layoutX="13.0" layoutY="166.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="125.0">
+              <items>
+                <MenuItem mnemonicParsing="false" text="B" />
+                  <MenuItem mnemonicParsing="false" text="C" />
+                <MenuItem mnemonicParsing="false" text="Db" />
+                  <MenuItem mnemonicParsing="false" text="D" />
+                  <MenuItem mnemonicParsing="false" text="Eb" />
+                  <MenuItem mnemonicParsing="false" text="E" />
+                  <MenuItem mnemonicParsing="false" text="F" />
+                  <MenuItem mnemonicParsing="false" text="Fb" />
+                  <MenuItem mnemonicParsing="false" text="G" />
+                  <MenuItem mnemonicParsing="false" text="Gb" />
+                  <MenuItem mnemonicParsing="false" text="A" />
+                  <MenuItem mnemonicParsing="false" text="Ab" />
+              </items>
+            </MenuButton>
+         </children>
+      </Pane>
+      <Button id="btn_create" fx:id="btn_create" layoutX="438.0" layoutY="321.0" mnemonicParsing="false" onAction="#CriarFlauta" prefHeight="26.0" prefWidth="125.0" text="Criar">
+         <styleClass>
+            <String fx:value="btnStyle" />
+            <String fx:value="btnCreate" />
+         </styleClass>
+      </Button>
+      <Label id="allTextStyle" layoutX="14.0" layoutY="373.0" text="SOPRO ŊINJA" />
+      <Label id="allTextStyle" layoutX="552.0" layoutY="373.0" text="v0.01" />
+      <Label id="allTextStyle" alignment="CENTER" layoutX="415.0" layoutY="179.0" prefHeight="18.0" prefWidth="321.0" rotate="90.0" text="COMPONENTES" />
+      <Pane id="caixaFurosDistancia" layoutX="14.0" layoutY="52.0" prefHeight="79.0" prefWidth="419.0">
+         <children>
+            <HBox layoutX="38.0" layoutY="26.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="18.0" prefWidth="378.0" spacing="55.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="4.0" text="I" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="204.0" layoutY="10.0" prefHeight="18.0" prefWidth="17.0" text="II" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="210.0" layoutY="10.0" prefHeight="18.0" prefWidth="16.0" text="III" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="217.0" layoutY="10.0" prefHeight="18.0" prefWidth="13.0" text="IV" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="223.0" layoutY="10.0" prefHeight="18.0" prefWidth="8.0" text="V" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="230.0" layoutY="10.0" prefHeight="18.0" prefWidth="13.0" text="VI" />
+               </children>
+            </HBox>
+            <Label layoutX="138.0" layoutY="5.0" text="DISTANCIA DOS FUROS" />
+            <HBox alignment="CENTER" layoutY="47.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="26.0" prefWidth="419.0" spacing="30.0">
+               <children>
+                  <TextField id="disFuro_1" fx:id="disFuro_1" editable="false" focusTraversable="false" prefHeight="26.0" prefWidth="97.0" promptText="mm">
+                     <font>
+                        <Font size="12.0" />
+                     </font></TextField>
+                  <TextField id="disFuro_2" fx:id="disFuro_2" editable="false" focusTraversable="false" layoutX="175.0" layoutY="10.0" prefHeight="26.0" prefWidth="97.0" promptText="mm">
+                     <font>
+                        <Font size="12.0" />
+                     </font></TextField>
+                  <TextField id="disFuro_3" fx:id="disFuro_3" editable="false" focusTraversable="false" layoutX="235.0" layoutY="10.0" prefHeight="26.0" prefWidth="97.0" promptText="mm">
+                     <font>
+                        <Font size="12.0" />
+                     </font></TextField>
+                  <TextField id="disFuro_4" fx:id="disFuro_4" editable="false" focusTraversable="false" layoutX="295.0" layoutY="10.0" prefHeight="26.0" prefWidth="97.0" promptText="mm">
+                     <font>
+                        <Font size="12.0" />
+                     </font></TextField>
+                  <TextField id="disFuro_5" fx:id="disFuro_5" editable="false" focusTraversable="false" layoutX="347.0" layoutY="10.0" prefHeight="26.0" prefWidth="97.0" promptText="mm">
+                     <font>
+                        <Font size="12.0" />
+                     </font></TextField>
+                  <TextField id="disFuro_6" fx:id="disFuro_6" editable="false" focusTraversable="false" layoutX="370.0" layoutY="10.0" prefHeight="26.0" prefWidth="97.0" promptText="mm">
+                     <font>
+                        <Font size="12.0" />
+                     </font></TextField>
+               </children>
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </HBox>
+         </children>
+      </Pane>
+      <Pane layoutX="14.0" layoutY="161.0" prefHeight="79.0" prefWidth="419.0">
+         <children>
+            <HBox layoutX="38.0" layoutY="26.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="18.0" prefWidth="378.0" spacing="55.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="4.0" text="I" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="204.0" layoutY="10.0" prefHeight="18.0" prefWidth="17.0" text="II" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="210.0" layoutY="10.0" prefHeight="18.0" prefWidth="16.0" text="III" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="217.0" layoutY="10.0" prefHeight="18.0" prefWidth="13.0" text="IV" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="223.0" layoutY="10.0" prefHeight="18.0" prefWidth="8.0" text="V" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="230.0" layoutY="10.0" prefHeight="18.0" prefWidth="13.0" text="VI" />
+               </children>
+            </HBox>
+            <Label layoutX="121.0" layoutY="5.0" text="CONFIGURAÇAO DOS FUROS" />
+            <HBox alignment="CENTER" layoutY="47.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="26.0" prefWidth="419.0" spacing="30.0">
+               <children>
+                  <TextField id="configFuro_1" fx:id="configFuro_1" alignment="CENTER" focusTraversable="false" prefHeight="26.0" prefWidth="70.0" promptText="\%">
+                     <font>
+                        <Font size="12.0" />
+                     </font></TextField>
+                  <TextField id="configFuro_2" fx:id="configFuro_2" alignment="CENTER" focusTraversable="false" layoutX="175.0" layoutY="10.0" prefHeight="26.0" prefWidth="70.0" promptText="\%">
+                     <font>
+                        <Font size="12.0" />
+                     </font></TextField>
+                  <TextField id="configFuro_3" fx:id="configFuro_3" alignment="CENTER" focusTraversable="false" layoutX="235.0" layoutY="10.0" prefHeight="26.0" prefWidth="70.0" promptText="\%">
+                     <font>
+                        <Font size="12.0" />
+                     </font></TextField>
+                  <TextField id="configFuro_4" fx:id="configFuro_4" alignment="CENTER" focusTraversable="false" layoutX="295.0" layoutY="10.0" prefHeight="26.0" prefWidth="70.0" promptText="\%">
+                     <font>
+                        <Font size="12.0" />
+                     </font></TextField>
+                  <TextField id="configFuro_5" fx:id="configFuro_5" alignment="CENTER" focusTraversable="false" layoutX="347.0" layoutY="10.0" prefHeight="26.0" prefWidth="70.0" promptText="\%">
+                     <font>
+                        <Font size="12.0" />
+                     </font></TextField>
+                  <TextField id="configFuro_6" fx:id="configFuro_6" alignment="CENTER" focusTraversable="false" layoutX="370.0" layoutY="10.0" prefHeight="26.0" prefWidth="70.0" promptText="\%">
+                     <font>
+                        <Font size="12.0" />
+                     </font></TextField>
+               </children>
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
